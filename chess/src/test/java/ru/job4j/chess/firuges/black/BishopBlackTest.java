@@ -13,7 +13,7 @@ public class BishopBlackTest {
     @Test
     public void whenPositionCorrect() {
         BishopBlack bishopBlack = new BishopBlack(Cell.A3);
-        assertThat(bishopBlack.position(), is (Cell.A3));
+        assertThat(bishopBlack.position(), is(Cell.A3));
     }
 
     @Test
@@ -26,18 +26,18 @@ public class BishopBlackTest {
     public void whenWayCorrectC1G5() {
        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
        Cell[] exp = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
-       assertThat(bishopBlack.way(Cell.G5), is (exp));
+       assertThat(bishopBlack.way(Cell.G5), is(exp));
     }
 
     @Test
     public void whenWayCorrectB8E5() {
         BishopBlack bishopBlack = new BishopBlack(Cell.B8);
         Cell[] exp = {Cell.C7, Cell.D6, Cell.E5};
-        assertThat(bishopBlack.way(Cell.E5), is (exp));
+        assertThat(bishopBlack.way(Cell.E5), is(exp));
     }
 
     @Test (expected = ImpossibleMoveException.class)
-    public void whenWayIsNotDiagonal () {
+    public void whenWayIsNotDiagonal() {
         BishopBlack bishopBlack = new BishopBlack(Cell.B8);
         bishopBlack.way(Cell.B6);
     }

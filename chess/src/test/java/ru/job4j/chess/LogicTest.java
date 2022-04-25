@@ -8,7 +8,7 @@ public class LogicTest {
 
     @Test(expected = FigureNotFoundException.class)
     public void whenFigureNotFoundException()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException{
+            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
         logic.add(new BishopBlack(Cell.A1));
         logic.move(Cell.A2, Cell.C4);
@@ -16,7 +16,7 @@ public class LogicTest {
 
     @Test(expected = OccupiedCellException.class)
     public void whenOccupiedCellException()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException{
+            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
         logic.add(new BishopBlack(Cell.A1));
         logic.add(new BishopBlack(Cell.B2));
